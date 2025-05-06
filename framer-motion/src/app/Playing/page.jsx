@@ -59,7 +59,7 @@ const Page = () => {
         <motion.div className="text-xl flex gap-2.5 items-center text-[#f7b0e3] opacity-0">
           <Rocket color="#ff1c51" /> CompanyName
         </motion.div>
-        <div className="md:flex md:justify-between md:w-[60vw] items-center hidden">
+        <div className="md:flex md:justify-between lg:w-[60vw] md:w-[65vw] items-center hidden">
           <ul className="flex gap-10 text-shadow-lg text-base">
             <MotionConfig
               transition={{
@@ -80,7 +80,7 @@ const Page = () => {
               duration: 0.125,
               ease: "easeIn",
             }}
-            className="bg-[#1a1a1a62] border border-white px-4 py-2 text-center cursor-pointer rounded-lg"
+            className="bg-[#1a1a1a62] border border-white px-4 py-2 text-center cursor-pointer rounded-lg text-sm"
           >
             Sign In / Sign Up
           </motion.button>
@@ -178,50 +178,50 @@ const Page = () => {
           className="md:m-10 m-3"
         >
           {/* bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text use this for gradient text */}
-          <h1 className="text-center md:text-[8rem] text-[3rem] font-bold font-[family-name:var(--font-geist-sans)] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
+          <h1 className="text-center md:text-[6rem] text-[3rem] font-bold font-[family-name:var(--font-geist-sans)] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
             Hello, World!
           </h1>
           <div className="flex flex-wrap gap-4 justify-center">
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
           </div>
         </motion.div>
       )}
