@@ -12,6 +12,19 @@ const Page = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
 
+  const boxes = [];
+  for (let i = 0; i < 15; i++) {
+    boxes.push(
+      <motion.div
+        initial={{ opacity: 0.3, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        key={i}
+        className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"
+      ></motion.div>
+    );
+  }
+
   const handleClick = () => setIsOpen(!isOpen);
 
   return (
@@ -46,11 +59,12 @@ const Page = () => {
         <Rocket color="#ff1c51" /> CompanyName
       </motion.div>
 
+      {/* backdrop-blur-md bg-opacity-70 border-b border-white/10 for glassmorphism */}
       <motion.header
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, ease: easeIn }}
-        className={`sticky top-0 bg-[#0a0a0ae3] py-3 min-h-16 px-4 flex justify-between ${
+        className={`sticky top-0 bg-[#0a0a0aa4] py-3 min-h-16 px-4 flex justify-between z-30 backdrop-blur-sm border-b border-white/10 ${
           isOpen
             ? "max-md:flex-col max-md:gap-8 max-md:items-start"
             : "flex-row items-center"
@@ -76,6 +90,7 @@ const Page = () => {
           </ul>
           <motion.button
             whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             transition={{
               duration: 0.125,
               ease: "easeIn",
@@ -148,6 +163,7 @@ const Page = () => {
             </ul>
             <motion.button
               whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
               transition={{
                 duration: 0.125,
                 ease: "easeIn",
@@ -181,48 +197,7 @@ const Page = () => {
           <h1 className="text-center md:text-[6rem] text-[3rem] font-bold font-[family-name:var(--font-geist-sans)] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
             Hello, World!
           </h1>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"></div>
-          </div>
+          <div className="flex flex-wrap gap-4 justify-center">{boxes}</div>
         </motion.div>
       )}
     </>
