@@ -116,7 +116,7 @@ export default function CakePage() {
             onAnimationComplete={() => setBegin(false)}
             className="flex justify-center items-center p-10 rounded-2xl h-screen"
           >
-            <motion.div className="p-4 bg-[#ffffff0f] rounded-2xl">
+            <motion.div className="p-4 bg-[#ffffff0f] rounded-2xl backdrop-blur-sm border-b border-white/10">
               <Image
                 src={currentImage}
                 width={220}
