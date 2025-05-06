@@ -39,9 +39,19 @@ function ConfettiPiece({ x, delay }) {
 export default function CakePage() {
   const [begin, setBegin] = useState(true);
   const [currentImage, setCurrentImage] = useState(images[0]);
+  const [radius, setRadius] = useState("30vw");
   const [confetti, setConfetti] = useState([]);
   const message = "Happy 25th Aniversary!";
   const letters = message.split("");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 768) {
+        setRadius("16vh");
+      } else setRadius("30vw");
+    }
+  }, []);
 
   useEffect(() => {
     const pieces = Array.from({ length: 200 }).map(() => ({
@@ -78,13 +88,11 @@ export default function CakePage() {
         <>
           {letters.map((char, i) => {
             const angle = (180 / letters.length) * i - 85; // centered arc
-            const radius = "20vw"; // responsive radius
             const fontSize = "clamp(1.5rem, 6vw, 3.5rem)"; // responsive font size
-
             return (
               <span
                 key={i}
-                className="absolute left-1/2 top-[24vw] -translate-x-1/2 origin-bottom font-bold"
+                className="absolute left-1/2 lg:top-[30vw] top-[34vh] -translate-x-1/2 origin-bottom font-bold"
                 style={{
                   transform: `rotate(${angle}deg) translateY(-${radius})`,
                   fontSize: fontSize,
