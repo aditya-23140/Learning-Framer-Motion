@@ -20,12 +20,16 @@ export default function CakePage() {
 
         {letters.map((char, i) => {
           const angle = (180 / letters.length) * i - 85; // centered arc
+          const radius = "30vw"; // responsive radius
+          const fontSize = "clamp(1.5rem, 6vw, 3.5rem)"; // responsive font size
+
           return (
             <span
               key={i}
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 origin-bottom text-6xl text-[#6c5742] font-bold"
+              className="absolute left-1/2 top-[24vw] -translate-x-1/2 origin-bottom font-bold text-[#6c5742]"
               style={{
-                transform: `rotate(${angle}deg) translateY(-300px)`,
+                transform: `rotate(${angle}deg) translateY(-${radius})`,
+                fontSize: fontSize,
               }}
             >
               {char}
