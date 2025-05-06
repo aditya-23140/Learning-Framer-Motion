@@ -10,6 +10,7 @@ const navItems = ["Home", "Works", "About", "Contacts"];
 
 const Page = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
 
   const handleClick = () => setIsOpen(!isOpen);
 
@@ -17,25 +18,29 @@ const Page = () => {
     <>
       <motion.div
         initial={{
-          scale: 3,
-          top: "42%",
-          left: "42%",
+          scale: 2,
+          top: "50%",
+          left: "50%",
           position: "absolute",
           zIndex: 50,
           opacity: 1,
+          translateX: "-50%",
+          translateY: "-50%",
         }}
         animate={{
           scale: 1,
           top: 20,
           left: 16,
           position: "fixed",
-          // opacity: 0.3,
+          translateX: "0%",
+          translateY: "0%",
         }}
         transition={{
           duration: 1,
           ease: "easeInOut",
           times: [0, 1],
         }}
+        onAnimationComplete={() => setShowHeader(true)}
         className="text-xl flex gap-2.5 items-center text-[#f7b0e3]"
       >
         <Rocket color="#ff1c51" /> CompanyName
@@ -45,7 +50,7 @@ const Page = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, ease: easeIn }}
-        className={`sticky top-0 bg-[#212121f4] py-3 min-h-16 px-4 flex justify-between ${
+        className={`sticky top-0 bg-[#0a0a0ae3] py-3 min-h-16 px-4 flex justify-between ${
           isOpen
             ? "max-md:flex-col max-md:gap-8 max-md:items-start"
             : "flex-row items-center"
@@ -131,7 +136,11 @@ const Page = () => {
                 }}
               >
                 {navItems.map((item) => (
-                  <Link key={item} href={`/${item.toLowerCase()}`} className="w-fit">
+                  <Link
+                    key={item}
+                    href={`/${item.toLowerCase()}`}
+                    className="w-fit"
+                  >
                     <HoverUnderline children={item} />
                   </Link>
                 ))}
@@ -150,6 +159,72 @@ const Page = () => {
           </motion.div>
         )}
       </motion.header>
+
+      {showHeader && (
+        <motion.div
+          initial={{
+            y: 300,
+            opacity: 0,
+          }}
+          animate={{
+            y: [300, -20, 0],
+            opacity: [0, 1, 1],
+          }}
+          transition={{
+            duration: 2,
+            ease: "easeInOut",
+            times: [0, 0.5, 1],
+          }}
+          className="md:m-10 m-3"
+        >
+          {/* bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text use this for gradient text */}
+          <h1 className="text-center md:text-[8rem] text-[3rem] font-bold font-[family-name:var(--font-geist-sans)] bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 text-transparent bg-clip-text">
+            Hello, World!
+          </h1>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+            <div className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b]"></div>
+          </div>
+        </motion.div>
+      )}
     </>
   );
 };
