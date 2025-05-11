@@ -7,20 +7,32 @@ import Link from "next/link";
 import HoverUnderline from "@/Components/HoverUnderline";
 
 const navItems = ["Home", "Works", "About", "Contacts"];
+const imgLinks = [
+  "https://plus.unsplash.com/premium_photo-1683910767532-3a25b821f7ae?q=80&w=2008&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1709884735626-63e92727d8b6?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1526779259212-939e64788e3c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1591779051696-1c3fa1469a79?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1544894079-e81a9eb1da8b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  "https://images.unsplash.com/photo-1505968409348-bd000797c92e?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+];
 
 const Page = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(false);
 
   const boxes = [];
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < 16; i++) {
+    const randomImg = imgLinks[Math.floor(Math.random() * imgLinks.length)];
     boxes.push(
       <motion.div
         initial={{ opacity: 0.3, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         key={i}
-        className="md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md"
+        className={`md:h-[250px] md:w-[250px] h-[10rem] w-[10rem] bg-[#9b9b9b] rounded-md bg-cover bg-center`} //Tailwind cannot parge dynamically generated bg-url(${var}})
+        style={{
+          backgroundImage: `url(${randomImg})`,
+        }}
       ></motion.div>
     );
   }
